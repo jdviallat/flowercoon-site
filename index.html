@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flowercoon — Fleurs de Bach & bien-être émotionnel</title>
+<meta name="description" content="Flowercoon, par Bengacoon : composez votre mélange de Fleurs de Bach, suivez vos prises jour après jour et découvrez 52 fleurs illustrées. Un compagnon doux pour vos émotions.">
+<link rel="icon" href="assets/favicon.png">
+<meta property="og:title" content="Flowercoon — Fleurs de Bach & bien-être">
+<meta property="og:description" content="Un compagnon doux pour vos émotions : questionnaire, mélange personnalisé, suivi de cure et 52 fleurs illustrées.">
+<meta property="og:image" content="assets/icon.png">
+<style>
+  :root{
+    --vert:#2E5E4E; --vert-fonce:#22483C; --or:#C9A24B; --or-clair:#E0C583;
+    --creme:#F6F2E9; --creme-2:#EFE8D8; --texte:#2A2A28; --muted:#6E6A60;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--texte); background:var(--creme); line-height:1.6;
+  }
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(246,242,233,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--creme-2)}
+  header .wrap{display:flex;align-items:center;gap:12px;height:64px}
+  header img{width:36px;height:36px;border-radius:9px}
+  header .brand{font-weight:800;font-size:19px;letter-spacing:.2px}
+  header .brand small{display:block;font-weight:600;font-size:11px;color:var(--muted);letter-spacing:.3px}
+  header nav{margin-left:auto;display:flex;gap:22px;font-size:14px;font-weight:600}
+  header nav a{color:var(--muted);text-decoration:none}
+  header nav a:hover{color:var(--vert)}
+  @media(max-width:640px){header nav{display:none}}
+
+  /* Hero */
+  .hero{background:linear-gradient(160deg,var(--vert) 0%,var(--vert-fonce) 100%);color:#fff;text-align:center;padding:72px 0 84px;position:relative;overflow:hidden}
+  .hero .petal{position:absolute;border-radius:50% 50% 50% 0;opacity:.08;background:var(--or-clair);transform:rotate(45deg)}
+  .hero .p1{width:240px;height:240px;top:-60px;left:-40px}
+  .hero .p2{width:180px;height:180px;bottom:-50px;right:-30px;border-radius:0 50% 50% 50%}
+  .hero .logo{width:98px;height:98px;border-radius:24px;box-shadow:0 12px 34px rgba(0,0,0,.28);margin-bottom:22px;position:relative}
+  .hero h1{font-size:44px;line-height:1.1;font-weight:800;letter-spacing:-.5px;position:relative}
+  .hero .par{color:var(--or-clair);font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;position:relative}
+  .hero p.lead{max-width:600px;margin:18px auto 0;font-size:18px;color:#EAF1EC;position:relative}
+  @media(max-width:640px){.hero h1{font-size:33px}.hero p.lead{font-size:16px}}
+
+  .stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px;position:relative}
+  .store{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--vert);font-weight:700;
+    padding:13px 22px;border-radius:14px;text-decoration:none;font-size:15px;box-shadow:0 6px 18px rgba(0,0,0,.18);transition:transform .15s}
+  .store:hover{transform:translateY(-2px)}
+  .store.soon{background:rgba(255,255,255,.14);color:#fff;box-shadow:none;border:1px solid rgba(255,255,255,.3)}
+  .store .em{font-size:20px}
+  .store small{display:block;font-weight:600;font-size:11px;opacity:.7}
+
+  /* Sections */
+  section{padding:66px 0}
+  .eyebrow{color:var(--or);font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-align:center}
+  h2{font-size:31px;font-weight:800;text-align:center;margin:8px 0 8px;letter-spacing:-.3px}
+  .sub{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 42px;font-size:16px}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--creme-2);border-radius:18px;padding:26px 22px;transition:transform .15s,box-shadow .15s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(46,94,78,.10)}
+  .card .em{font-size:30px;display:inline-block;margin-bottom:12px}
+  .card h3{font-size:18px;font-weight:800;margin-bottom:7px;color:var(--vert)}
+  .card p{color:var(--muted);font-size:14.5px}
+
+  /* Premium band */
+  .premium{background:var(--creme-2)}
+  .premium .box{background:#fff;border:1px solid #E7DFCB;border-radius:22px;padding:40px 34px;text-align:center;max-width:720px;margin:0 auto;position:relative}
+  .premium .price{display:inline-block;background:var(--or);color:#3a2e12;font-weight:800;padding:6px 16px;border-radius:999px;font-size:14px;margin-bottom:14px}
+  .premium h2{margin-top:0}
+  .premium ul{list-style:none;display:inline-block;text-align:left;margin:18px auto 0;color:var(--texte)}
+  .premium li{padding:5px 0 5px 30px;position:relative;font-size:15px}
+  .premium li::before{content:"🌼";position:absolute;left:0}
+  .premium .free{color:var(--muted);font-size:14px;margin-top:20px}
+
+  /* Privacy strip */
+  .privacy{background:var(--vert);color:#EAF1EC;text-align:center}
+  .privacy h2{color:#fff}
+  .privacy .sub{color:#C5D6CC}
+
+  footer{background:var(--vert-fonce);color:#B9C9BF;text-align:center;padding:40px 0;font-size:13.5px}
+  footer a{color:var(--or-clair);text-decoration:none}
+  footer .disc{max-width:640px;margin:16px auto 0;font-size:12px;color:#8FA79A;line-height:1.5}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="assets/icon.png" alt="Flowercoon">
+    <div class="brand">Flowercoon<small>par Bengacoon</small></div>
+    <nav>
+      <a href="#fonctions">Fonctions</a>
+      <a href="#premium">Premium</a>
+      <a href="#confidentialite">Confidentialité</a>
+      <a href="privacy.html">Mentions</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <span class="petal p1"></span><span class="petal p2"></span>
+  <div class="wrap">
+    <img class="logo" src="assets/icon.png" alt="Flowercoon">
+    <div class="par">par Bengacoon</div>
+    <h1>Flowercoon</h1>
+    <p class="lead">Votre compagnon des Fleurs de Bach : une application douce et illustrée pour accompagner vos émotions, jour après jour.</p>
+    <div class="stores">
+      <a class="store" href="https://play.google.com/store/apps/details?id=com.bengacoon.flowercoon">
+        <span class="em">▶</span><span><small>Disponible sur</small>Google&nbsp;Play</span>
+      </a>
+      <a class="store soon" href="#">
+        <span class="em"></span><span><small>Bientôt sur</small>App&nbsp;Store</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<section id="fonctions">
+  <div class="wrap">
+    <div class="eyebrow">Ce que fait l'app</div>
+    <h2>Un accompagnement tout en douceur</h2>
+    <p class="sub">Découvrir, comprendre et suivre vos Fleurs de Bach — sans compte, sans jargon.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="em">🌼</span><h3>Découvrir les fleurs</h3>
+        <p>Les 38 Fleurs de Bach et le Rescue, chacune avec sa photo, son état émotionnel, son côté lumineux et sa part d'ombre. Recherche par besoin et comparateur de deux fleurs.</p>
+      </div>
+      <div class="card">
+        <span class="em">📝</span><h3>Questionnaire émotionnel</h3>
+        <p>Faites le point en douceur : Flowercoon compose un mélange personnalisé de fleurs avec sa posologie, et vous montre en quoi chacune répond à votre état.</p>
+      </div>
+      <div class="card">
+        <span class="em">💧</span><h3>Suivre votre cure</h3>
+        <p>Notez vos prises, votre humeur et votre énergie. Rappels adaptés, graphiques de progrès, et possibilité de créer votre propre suivi sur mesure.</p>
+      </div>
+      <div class="card">
+        <span class="em">⭐</span><h3>Favoris & journal</h3>
+        <p>Marquez vos fleurs préférées, tenez un journal daté, gagnez des badges de régularité, et retrouvez une « fleur du jour » à chaque ouverture.</p>
+      </div>
+      <div class="card">
+        <span class="em">🌬️</span><h3>Mode SOS & respiration</h3>
+        <p>Un moment difficile ? Un exercice de cohérence cardiaque guidé (l'écran reste allumé) et le mélange de secours, toujours à portée de main.</p>
+      </div>
+      <div class="card">
+        <span class="em">🌍</span><h3>Élixirs du monde</h3>
+        <p>Au-delà des fleurs du Dr Bach, une collection d'essences australiennes et californiennes illustrées, à explorer avec la version Premium.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="premium" class="premium">
+  <div class="wrap">
+    <div class="box">
+      <span class="price">Achat unique · 4,90 €</span>
+      <h2>Premium, sans abonnement</h2>
+      <p class="sub" style="margin-bottom:6px">Débloquez toute la richesse de Flowercoon d'un seul achat.</p>
+      <ul>
+        <li>Toutes les fleurs et le Rescue</li>
+        <li>Questionnaires Standard et Approfondi</li>
+        <li>Suivi complet et suivi personnalisé</li>
+        <li>Collection « Élixirs du monde »</li>
+      </ul>
+      <p class="free">La version gratuite offre le questionnaire Express et une sélection de fleurs — pour découvrir l'app en toute liberté.</p>
+    </div>
+  </div>
+</section>
+
+<section id="confidentialite" class="privacy">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--or-clair)">Vos données, chez vous</div>
+    <h2>Rien ne quitte votre téléphone</h2>
+    <p class="sub">Aucune donnée envoyée sur Internet, aucun compte à créer. Verrouillage par code ou Face ID, export et import de vos données quand vous le souhaitez.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Flowercoon</strong> — par Bengacoon · Disponible en 9 langues<br>
+    <a href="privacy.html">Politique de confidentialité</a> &nbsp;·&nbsp; © 2026 Bengacoon
+    <p class="disc">Flowercoon est une application de bien-être émotionnel. Elle n'établit aucun diagnostic, ne constitue pas un traitement et ne remplace pas l'avis d'un professionnel de santé.</p>
+  </div>
+</footer>
+
+</body>
+</html>
