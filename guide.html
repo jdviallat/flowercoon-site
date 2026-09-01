@@ -18,14 +18,15 @@
   .wrap{max-width:920px;margin:0 auto;padding:0 22px}
 
   header{position:sticky;top:0;z-index:20;background:rgba(246,242,233,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--creme-2)}
-  header .wrap{display:flex;align-items:center;gap:12px;height:60px}
-  header img{width:32px;height:32px;border-radius:8px}
-  header .brand{font-weight:800;font-size:17px}
-  header .brand small{display:block;font-weight:600;font-size:10.5px;color:var(--muted)}
-  header nav{margin-left:auto;display:flex;gap:20px;font-size:14px;font-weight:600}
-  header nav a{color:var(--muted);text-decoration:none}
-  header nav a:hover{color:var(--vert)}
-  @media(max-width:560px){header nav a.hide{display:none}}
+  header .wrap{display:flex;align-items:center;gap:12px;min-height:62px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  header .home{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
+  header img{width:34px;height:34px;border-radius:9px}
+  header .brand{font-weight:800;font-size:18px;letter-spacing:.2px}
+  header .brand small{display:block;font-weight:600;font-size:10.5px;color:var(--muted);letter-spacing:.3px}
+  header nav{margin-left:auto;display:flex;gap:20px;font-size:14px;font-weight:600;flex-wrap:wrap}
+  header nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
+  header nav a:hover,header nav a.active{color:var(--vert)}
+  @media(max-width:600px){header nav{width:100%;margin-left:0;gap:14px 18px;padding-top:2px}}
 
   .hero{background:linear-gradient(160deg,var(--vert) 0%,var(--vert-fonce) 100%);color:#fff;text-align:center;padding:52px 0 58px}
   .hero .eyebrow{color:var(--or-clair);font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase}
@@ -69,11 +70,15 @@
 
 <header>
   <div class="wrap">
-    <img src="assets/icon.png" alt="Flowercoon">
-    <div class="brand">Flowercoon<small>Guide d'utilisation</small></div>
+    <a class="home" href="index.html">
+      <img src="assets/icon.png" alt="Flowercoon">
+      <span class="brand">Flowercoon<small>par Bengacoon</small></span>
+    </a>
     <nav>
-      <a href="index.html" class="hide">Accueil</a>
-      <a href="index.html#premium" class="hide">Premium</a>
+      <a href="index.html">Accueil</a>
+      <a href="index.html#fonctions">Fonctions</a>
+      <a href="guide.html" class="active">Guide</a>
+      <a href="index.html#premium">Premium</a>
       <a href="privacy.html">Confidentialité</a>
     </nav>
   </div>
