@@ -26,6 +26,7 @@
   header nav{margin-left:auto;display:flex;gap:20px;font-size:14px;font-weight:600;flex-wrap:wrap}
   header nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
   header nav a:hover,header nav a.active{color:var(--vert)}
+  #fc-lang{font:inherit;font-size:13px;font-weight:700;color:var(--vert);background:#fff;border:1px solid var(--creme-2);border-radius:8px;padding:4px 8px;cursor:pointer}
   @media(max-width:600px){header nav{width:100%;margin-left:0;gap:14px 18px;padding-top:2px}}
 
   .hero{background:linear-gradient(160deg,var(--vert) 0%,var(--vert-fonce) 100%);color:#fff;text-align:center;padding:46px 0 50px}
@@ -55,11 +56,12 @@
       <span class="brand">Flowercoon<small>par Bengacoon</small></span>
     </a>
     <nav>
-      <a href="index.html">Accueil</a>
-      <a href="index.html#fonctions">Fonctions</a>
-      <a href="guide.html">Guide</a>
-      <a href="index.html#premium">Premium</a>
-      <a href="privacy.html" class="active">Confidentialité</a>
+      <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+      <a href="index.html#fonctions" data-i18n="nav.fonctions">Fonctions</a>
+      <a href="guide.html" data-i18n="nav.guide">Guide</a>
+      <a href="index.html#premium" data-i18n="nav.premium">Premium</a>
+      <a href="privacy.html" class="active" data-i18n="nav.confidentialite">Confidentialité</a>
+      <select id="fc-lang" aria-label="Langue / Language"></select>
     </nav>
   </div>
 </header>
@@ -67,69 +69,48 @@
 <div class="hero">
   <div class="wrap">
     <div class="eyebrow">Par Bengacoon</div>
-    <h1>Confidentialité</h1>
+    <h1 data-i18n="pv.hero">Confidentialité</h1>
   </div>
 </div>
 
 <div class="wrap legal">
 
-  <h1>Politique de confidentialité</h1>
-  <p><em>Dernière mise à jour : juillet 2026 · Éditeur : Bengacoon</em></p>
-  <p>Flowercoon (« l'application ») est conçue dans le respect total de votre vie privée.</p>
+  <h1 data-i18n="pv.title">Politique de confidentialité</h1>
+  <p data-i18n="pv.updated"><em>Dernière mise à jour : juillet 2026 · Éditeur : Bengacoon</em></p>
+  <p data-i18n="pv.intro">Flowercoon (« l'application ») est conçue dans le respect total de votre vie privée.</p>
 
-  <h2>Aucune collecte de données</h2>
-  <p>L'application <strong>ne collecte, ne transmet et ne partage aucune donnée personnelle</strong>. Elle ne nécessite pas de création de compte et ne demande aucune connexion.</p>
+  <h2 data-i18n="pv.h1">Aucune collecte de données</h2>
+  <p data-i18n-html="pv.p1">L'application <strong>ne collecte, ne transmet et ne partage aucune donnée personnelle</strong>. Elle ne nécessite pas de création de compte et ne demande aucune connexion.</p>
 
-  <h2>Vos données restent sur votre appareil</h2>
-  <p>Toutes les informations que vous saisissez (prénom, intentions, cures, prises, humeur, énergie, journal, favoris) sont <strong>stockées uniquement en local</strong>, sur votre appareil. Elles ne sont jamais envoyées sur un serveur. Vous pouvez à tout moment les exporter (fichier de sauvegarde), les importer, ou tout effacer depuis les réglages de l'application.</p>
+  <h2 data-i18n="pv.h2">Vos données restent sur votre appareil</h2>
+  <p data-i18n-html="pv.p2">Toutes les informations que vous saisissez (prénom, intentions, cures, prises, humeur, énergie, journal, favoris) sont <strong>stockées uniquement en local</strong>, sur votre appareil. Elles ne sont jamais envoyées sur un serveur. Vous pouvez à tout moment les exporter (fichier de sauvegarde), les importer, ou tout effacer depuis les réglages de l'application.</p>
 
-  <h2>Aucun traqueur, aucune publicité</h2>
-  <p>L'application ne contient <strong>aucun outil de suivi, d'analyse ou de publicité</strong> tiers.</p>
+  <h2 data-i18n="pv.h3">Aucun traqueur, aucune publicité</h2>
+  <p data-i18n-html="pv.p3">L'application ne contient <strong>aucun outil de suivi, d'analyse ou de publicité</strong> tiers.</p>
 
-  <h2>Notifications &amp; biométrie</h2>
-  <p>Si vous les activez, les <strong>rappels de prises</strong> sont générés localement sur votre appareil (notifications locales). Le <strong>verrouillage par Face ID / Touch ID</strong> est traité par le système de votre appareil ; Flowercoon ne reçoit jamais vos données biométriques.</p>
+  <h2 data-i18n="pv.h4">Notifications &amp; biométrie</h2>
+  <p data-i18n-html="pv.p4">Si vous les activez, les <strong>rappels de prises</strong> sont générés localement sur votre appareil (notifications locales). Le <strong>verrouillage par Face ID / Touch ID</strong> est traité par le système de votre appareil ; Flowercoon ne reçoit jamais vos données biométriques.</p>
 
-  <h2>Achat intégré</h2>
-  <p>Le déblocage de la version Premium est un achat unique traité par l'App Store d'Apple. Flowercoon ne reçoit ni ne stocke aucune donnée de paiement.</p>
+  <h2 data-i18n="pv.h5">Achat intégré</h2>
+  <p data-i18n="pv.p5">Le déblocage de la version Premium est un achat unique traité par l'App Store d'Apple. Flowercoon ne reçoit ni ne stocke aucune donnée de paiement.</p>
 
-  <h2>Enfants</h2>
-  <p>L'application ne s'adresse pas spécifiquement aux enfants et ne collecte aucune donnée les concernant.</p>
+  <h2 data-i18n="pv.h6">Enfants</h2>
+  <p data-i18n="pv.p6">L'application ne s'adresse pas spécifiquement aux enfants et ne collecte aucune donnée les concernant.</p>
 
-  <h2>Avertissement bien-être</h2>
-  <p>Flowercoon est une application de bien-être émotionnel. Elle n'établit aucun diagnostic, ne constitue pas un traitement et ne remplace pas l'avis d'un professionnel de santé.</p>
+  <h2 data-i18n="pv.h7">Avertissement bien-être</h2>
+  <p data-i18n="pv.p7">Flowercoon est une application de bien-être émotionnel. Elle n'établit aucun diagnostic, ne constitue pas un traitement et ne remplace pas l'avis d'un professionnel de santé.</p>
 
-  <h2>Contact</h2>
-  <p>Pour toute question : <code>contact@bengacoon.com</code></p>
-
-  <hr>
-
-  <h1>Privacy Policy (English)</h1>
-  <p><em>Last updated: July 2026 · Publisher: Bengacoon</em></p>
-  <p>Flowercoon ("the app") is built with full respect for your privacy.</p>
-  <h2>No data collection</h2>
-  <p>The app <strong>does not collect, transmit or share any personal data</strong>. No account is required and no sign-in is requested.</p>
-  <h2>Your data stays on your device</h2>
-  <p>Everything you enter (name, intentions, cures, intakes, mood, energy, journal, favourites) is <strong>stored locally on your device only</strong>. It is never sent to a server. You can export it (backup file), import it, or erase everything from the app settings at any time.</p>
-  <h2>No trackers, no ads</h2>
-  <p>The app contains <strong>no third-party tracking, analytics or advertising</strong>.</p>
-  <h2>Notifications &amp; biometrics</h2>
-  <p>If enabled, intake <strong>reminders</strong> are generated locally (local notifications). <strong>Face ID / Touch ID</strong> locking is handled by your device's system; Flowercoon never receives your biometric data.</p>
-  <h2>In-app purchase</h2>
-  <p>Unlocking Premium is a one-time purchase handled by Apple's App Store. Flowercoon receives and stores no payment data.</p>
-  <h2>Children</h2>
-  <p>The app is not directed at children and collects no data about them.</p>
-  <h2>Wellbeing notice</h2>
-  <p>Flowercoon is an emotional wellbeing app. It provides no diagnosis, is not a treatment, and does not replace professional medical advice.</p>
-  <h2>Contact</h2>
-  <p><code>contact@bengacoon.com</code></p>
+  <h2 data-i18n="pv.h8">Contact</h2>
+  <p data-i18n-html="pv.p8">Pour toute question : <code>contact@bengacoon.com</code></p>
 
 </div>
 
 <footer>
   <div class="wrap">
-    <a href="index.html">← Retour à l'accueil</a> &nbsp;·&nbsp; <a href="guide.html">Guide</a> &nbsp;·&nbsp; © 2026 Bengacoon
+    <a href="index.html" data-i18n="pv.back">← Retour à l'accueil</a> &nbsp;·&nbsp; <a href="guide.html" data-i18n="nav.guide">Guide</a> &nbsp;·&nbsp; © 2026 Bengacoon
   </div>
 </footer>
 
+<script src="lang.js" defer></script>
 </body>
 </html>

@@ -26,6 +26,7 @@
   header nav{margin-left:auto;display:flex;gap:20px;font-size:14px;font-weight:600;flex-wrap:wrap}
   header nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
   header nav a:hover,header nav a.active{color:var(--vert)}
+  #fc-lang{font:inherit;font-size:13px;font-weight:700;color:var(--vert);background:#fff;border:1px solid var(--creme-2);border-radius:8px;padding:4px 8px;cursor:pointer}
   @media(max-width:600px){header nav{width:100%;margin-left:0;gap:14px 18px;padding-top:2px}}
 
   .hero{background:linear-gradient(160deg,var(--vert) 0%,var(--vert-fonce) 100%);color:#fff;text-align:center;padding:52px 0 58px}
@@ -75,11 +76,12 @@
       <span class="brand">Flowercoon<small>par Bengacoon</small></span>
     </a>
     <nav>
-      <a href="index.html">Accueil</a>
-      <a href="index.html#fonctions">Fonctions</a>
-      <a href="guide.html" class="active">Guide</a>
-      <a href="index.html#premium">Premium</a>
-      <a href="privacy.html">Confidentialité</a>
+      <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+      <a href="index.html#fonctions" data-i18n="nav.fonctions">Fonctions</a>
+      <a href="guide.html" class="active" data-i18n="nav.guide">Guide</a>
+      <a href="index.html#premium" data-i18n="nav.premium">Premium</a>
+      <a href="privacy.html" data-i18n="nav.confidentialite">Confidentialité</a>
+      <select id="fc-lang" aria-label="Langue / Language"></select>
     </nav>
   </div>
 </header>
@@ -87,8 +89,8 @@
 <div class="hero">
   <div class="wrap">
     <div class="eyebrow">Par Bengacoon</div>
-    <h1>Comment utiliser Flowercoon</h1>
-    <p>Tout ce que vous pouvez faire avec l'application — et comment, étape par étape.</p>
+    <h1 data-i18n="gd.hero.t">Comment utiliser Flowercoon</h1>
+    <p data-i18n="gd.hero.p">Tout ce que vous pouvez faire avec l'application — et comment, étape par étape.</p>
   </div>
 </div>
 
@@ -96,31 +98,31 @@
 
   <!-- Sommaire -->
   <div class="toc">
-    <h2>Sommaire</h2>
+    <h2 data-i18n="gd.toc">Sommaire</h2>
     <div class="grid">
-      <a href="#demarrer"><span class="em">🚀</span> Bien démarrer</a>
-      <a href="#trouver"><span class="em">🔎</span> Trouver ses fleurs</a>
-      <a href="#melanges"><span class="em">🧪</span> Composer un mélange</a>
-      <a href="#suivi"><span class="em">💧</span> Suivre une cure</a>
-      <a href="#rituels"><span class="em">🌙</span> Rituels & découverte</a>
-      <a href="#therapeute"><span class="em">🧑‍⚕️</span> Mode thérapeute</a>
-      <a href="#premium"><span class="em">🌼</span> Premium & licence</a>
-      <a href="#donnees"><span class="em">🔒</span> Données & MAJ</a>
+      <a href="#demarrer"><span class="em">🚀</span> <span data-i18n="gd.tl1">Bien démarrer</span></a>
+      <a href="#trouver"><span class="em">🔎</span> <span data-i18n="gd.tl2">Trouver ses fleurs</span></a>
+      <a href="#melanges"><span class="em">🧪</span> <span data-i18n="gd.tl3">Composer un mélange</span></a>
+      <a href="#suivi"><span class="em">💧</span> <span data-i18n="gd.tl4">Suivre une cure</span></a>
+      <a href="#rituels"><span class="em">🌙</span> <span data-i18n="gd.tl5">Rituels & découverte</span></a>
+      <a href="#therapeute"><span class="em">🧑‍⚕️</span> <span data-i18n="gd.tl6">Mode thérapeute</span></a>
+      <a href="#premium"><span class="em">🌼</span> <span data-i18n="gd.tl7">Premium & licence</span></a>
+      <a href="#donnees"><span class="em">🔒</span> <span data-i18n="gd.tl8">Données & MAJ</span></a>
     </div>
   </div>
 
   <!-- BIEN DÉMARRER -->
   <section class="doc" id="demarrer">
-    <h2>🚀 Bien démarrer</h2>
-    <p class="intro">Flowercoon vous accompagne dans le choix et le suivi des Fleurs de Bach. Tout fonctionne hors-ligne ; rien n'est envoyé sur Internet.</p>
+    <h2 data-i18n="gd.h1">🚀 Bien démarrer</h2>
+    <p class="intro" data-i18n-html="gd.in1">Flowercoon vous accompagne dans le choix et le suivi des Fleurs de Bach. Tout fonctionne hors-ligne ; rien n'est envoyé sur Internet.</p>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f1">
       <h3>Installer l'application</h3>
       <p><strong>Android</strong> : téléchargez le dernier APK depuis la page des versions, puis ouvrez-le (autorisez « installer des applications inconnues » si demandé). <strong>iOS</strong> : via l'App Store (bientôt).</p>
       <p><strong>Mises à jour</strong> : l'app vous prévient quand une nouvelle version existe. Installez-la par-dessus l'ancienne : vos données et votre licence sont conservées.</p>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f2">
       <h3>L'écran d'accueil</h3>
       <p>Vous y trouvez la <em>fleur du jour</em> et des tuiles vers toutes les fonctions : jardin, rituel, tirage, mélanges, roue des émotions, quiz, SOS, bilan. En bas, quatre onglets : <strong>Accueil · Questionnaire · Fleurs · Suivi</strong>. La roue ⚙️ en haut à droite ouvre les Réglages.</p>
     </div>
@@ -128,23 +130,23 @@
 
   <!-- TROUVER -->
   <section class="doc" id="trouver">
-    <h2>🔎 Trouver ses fleurs</h2>
-    <p class="intro">Plusieurs chemins mènent à la bonne fleur, selon votre humeur du moment.</p>
+    <h2 data-i18n="gd.h2">🔎 Trouver ses fleurs</h2>
+    <p class="intro" data-i18n-html="gd.in2">Plusieurs chemins mènent à la bonne fleur, selon votre humeur du moment.</p>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f3">
       <h3>Le questionnaire émotionnel</h3>
       <span class="path">Onglet Questionnaire</span>
       <p>Répondez à quelques questions sur votre état : humeur, stress, sommeil, confiance, peurs… L'app en déduit vos états émotionnels dominants et vous propose un <strong>mélange personnalisé</strong> prêt à démarrer en cure.</p>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f4">
       <h3>Le catalogue des fleurs <span class="tag free">gratuit</span></h3>
       <span class="path">Onglet Fleurs</span>
       <p>Parcourez les 38 fleurs de Bach (les « Élixirs du monde » sont réservés au premium). Tapez un besoin dans la recherche (« je n'arrive pas à dormir ») pour voir les fleurs correspondantes.</p>
       <p>Chaque fiche détaille : l'état accompagné, le potentiel positif, l'affirmation, la plante, les signes typiques, <strong>« Souvent associée à »</strong> (fleurs liées, d'un tap) et <strong>« À ne pas confondre »</strong>. Bouton 🔊 pour l'écouter à voix haute.</p>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f5">
       <h3>La roue des émotions <span class="tag free">gratuit</span></h3>
       <span class="path">Accueil → 🎡 Roue des émotions</span>
       <p>Choisissez sur la roue le registre émotionnel qui vous parle (les 7 grandes familles du Dr Bach : peur, incertitude, solitude…) et découvrez d'un coup les fleurs qui l'accompagnent.</p>
@@ -153,10 +155,10 @@
 
   <!-- MÉLANGES -->
   <section class="doc" id="melanges">
-    <h2>🧪 Composer un mélange</h2>
-    <p class="intro">Le cœur de Flowercoon : comprendre comment des fleurs travaillent ensemble.</p>
+    <h2 data-i18n="gd.h3">🧪 Composer un mélange</h2>
+    <p class="intro" data-i18n-html="gd.in3">Le cœur de Flowercoon : comprendre comment des fleurs travaillent ensemble.</p>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f6">
       <h3>Analyser un mélange <span class="tag free">gratuit</span></h3>
       <span class="path">Accueil → 🧪 Analyser un mélange</span>
       <p>Sélectionnez 2 à 4 fleurs (jusqu'à 7). L'app affiche :</p>
@@ -169,7 +171,7 @@
       <p>Si votre sélection correspond à une recette connue, l'app vous propose directement sa fiche.</p>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f7">
       <h3>Les mélanges tout prêts</h3>
       <span class="path">Accueil → 🌿 Mélanges</span>
       <p>Un catalogue de <strong>20 combinaisons signatures</strong>, rangées par thème (sommeil, stress, confiance, deuil, transitions, relations, peurs, énergie). Chaque fiche donne l'indication, le rôle de chaque fleur, la synergie, la posologie et la durée. Disponible en 9 langues.</p>
@@ -180,7 +182,7 @@
       </ul>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f8">
       <h3>Mes mélanges perso</h3>
       <span class="path">Analyser un mélange → 💾 Enregistrer</span>
       <p>Après avoir composé une sélection, enregistrez-la et donnez-lui un nom. Vous la retrouvez ensuite en haut du catalogue des mélanges (« Mes mélanges »), pour la rouvrir ou la supprimer quand vous voulez.</p>
@@ -189,10 +191,10 @@
 
   <!-- SUIVI -->
   <section class="doc" id="suivi">
-    <h2>💧 Suivre une cure</h2>
-    <p class="intro">Le suivi transforme un mélange en habitude douce, jour après jour. <span class="tag premium">premium</span></p>
+    <h2 data-i18n="gd.h4">💧 Suivre une cure</h2>
+    <p class="intro" data-i18n-html="gd.in4">Le suivi transforme un mélange en habitude douce, jour après jour. <span class="tag premium">premium</span></p>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f9">
       <h3>Démarrer et noter ses prises</h3>
       <span class="path">Onglet Suivi</span>
       <p>Lancez une cure depuis le questionnaire, une recette ou un mélange perso. Chaque jour, notez vos prises d'un tap — avec, si vous le souhaitez, votre humeur, votre énergie et un ressenti.</p>
@@ -203,13 +205,13 @@
       </ul>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f10">
       <h3>Mon jardin</h3>
       <span class="path">Accueil → 🌱 Mon jardin</span>
       <p>Chaque prise fait pousser puis éclore une fleur de votre cure, avec sa vraie photo. Un jardin unique qui grandit avec votre régularité, à partager.</p>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f11">
       <h3>Progression & bilan</h3>
       <span class="path">Onglet Suivi</span>
       <p>Suivez votre observance (régularité), votre série de jours consécutifs, et les <strong>courbes d'humeur et d'énergie</strong>. À la fin d'une cure, l'app vous propose de <strong>faire le bilan</strong> pour mesurer le chemin parcouru.</p>
@@ -218,22 +220,22 @@
 
   <!-- RITUELS -->
   <section class="doc" id="rituels">
-    <h2>🌙 Rituels & découverte</h2>
-    <p class="intro">Des moments doux et ludiques autour des fleurs.</p>
+    <h2 data-i18n="gd.h5">🌙 Rituels & découverte</h2>
+    <p class="intro" data-i18n-html="gd.in5">Des moments doux et ludiques autour des fleurs.</p>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f12">
       <h3>Rituel du soir</h3>
       <span class="path">Accueil → 🌙 Rituel du soir</span>
       <p>Un moment guidé avant de dormir : quelques respirations en cohérence cardiaque, votre fleur pour la nuit et son affirmation, à écouter à voix haute.</p>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f13">
       <h3>SOS · Apaisement</h3>
       <span class="path">Accueil → 🆘 SOS</span>
       <p>Pour un moment difficile ponctuel (trac, choc, crise) : les fleurs d'urgence et le Rescue, tout de suite.</p>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f14">
       <h3>Tirage & quiz</h3>
       <p><strong>🔮 Tirage</strong> : une fleur-message tirée au hasard, comme un oracle. <strong>🎯 Quiz</strong> : un petit jeu pour apprendre à reconnaître les 38 fleurs à partir de leur accroche.</p>
     </div>
@@ -241,22 +243,22 @@
 
   <!-- THÉRAPEUTE -->
   <section class="doc" id="therapeute">
-    <h2>🧑‍⚕️ Mode thérapeute</h2>
-    <p class="intro">Pour les praticiens qui accompagnent plusieurs personnes. <span class="tag pro">mode thérapeute</span></p>
+    <h2 data-i18n="gd.h6">🧑‍⚕️ Mode thérapeute</h2>
+    <p class="intro" data-i18n-html="gd.in6">Pour les praticiens qui accompagnent plusieurs personnes. <span class="tag pro">mode thérapeute</span></p>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f15">
       <h3>Activer le mode et gérer ses clients</h3>
       <span class="path">Réglages → Mode thérapeute</span>
       <p>Activez-le pour créer plusieurs fiches clients, chacune avec son suivi, son journal et ses cures. Basculez de client via la pastille en haut de l'écran.</p>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f16">
       <h3>Ordonnance PDF</h3>
       <span class="path">Fiche cure → Exporter l'ordonnance</span>
       <p>Générez une ordonnance propre à remettre au client : nom, fleurs prescrites avec leur rôle, posologie, durée et ligne de signature.</p>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f17">
       <h3>Agenda de séances</h3>
       <span class="path">Onglet Suivi (mode thérapeute)</span>
       <p>Notez le déroulé et les observations de chaque séance, datées par client, et retrouvez tout l'historique.</p>
@@ -265,15 +267,15 @@
 
   <!-- PREMIUM -->
   <section class="doc" id="premium">
-    <h2>🌼 Premium & licence</h2>
-    <p class="intro">Flowercoon est utilisable gratuitement ; la version complète débloque tout.</p>
+    <h2 data-i18n="gd.h7">🌼 Premium & licence</h2>
+    <p class="intro" data-i18n-html="gd.in7">Flowercoon est utilisable gratuitement ; la version complète débloque tout.</p>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f18">
       <h3>Gratuit vs premium</h3>
       <p><strong>Gratuit</strong> : les 38 fleurs de Bach, le catalogue, l'analyse de mélange, la roue des émotions, le quiz, les fiches. <strong>Premium</strong> : le questionnaire complet, le suivi de cure, les « Élixirs du monde », les recettes premium et le mode thérapeute.</p>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f19">
       <h3>Débloquer avec une licence</h3>
       <span class="path">Réglages → J'ai un code</span>
       <p>Pour la version téléchargée (hors store), réglez <strong>4,90 €</strong> (PayPal ou SumUp depuis la page d'accueil du site). Vous recevez par e-mail une <strong>licence à vie</strong>, dédiée, à coller dans <em>Réglages → J'ai un code</em>.</p>
@@ -283,21 +285,21 @@
 
   <!-- DONNÉES -->
   <section class="doc" id="donnees">
-    <h2>🔒 Données & mises à jour</h2>
+    <h2 data-i18n="gd.h8">🔒 Données & mises à jour</h2>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f20">
       <h3>Vos données restent chez vous</h3>
       <p>Tout est stocké <strong>localement sur votre appareil</strong>. Aucune donnée personnelle n'est envoyée sur Internet (seule la vérification de mise à jour interroge un fichier public, sans transmettre d'information).</p>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f21">
       <h3>Sauvegarde & restauration</h3>
       <span class="path">Réglages → Sauvegarde complète / Importer</span>
       <p>Exportez à tout moment un fichier de sauvegarde (clients, cures, prises, journal, mélanges) et réimportez-le sur un autre appareil ou après une réinstallation.</p>
       <div class="note">Une <strong>sauvegarde de secours automatique</strong> est conservée en interne à chaque enregistrement : vos données ne peuvent pas être effacées par une lecture défectueuse, et une mise à jour normale n'y touche jamais.</div>
     </div>
 
-    <div class="feat">
+    <div class="feat" data-i18n-html="gd.f22">
       <h3>Réglages</h3>
       <span class="path">Roue ⚙️ en haut</span>
       <p>Thème clair/sombre, taille du texte, langue (9 langues), lecture vocale, rappels de prise, verrouillage par code/biométrie, mode thérapeute, et l'historique des versions.</p>
@@ -308,10 +310,11 @@
 
 <footer>
   <div class="wrap">
-    <a href="index.html">← Retour à l'accueil</a> &nbsp;·&nbsp; <a href="privacy.html">Confidentialité</a> &nbsp;·&nbsp; © 2026 Bengacoon
-    <div class="disc">Flowercoon est un accompagnement de bien-être émotionnel. Il ne remplace pas un avis, un diagnostic ou un traitement médical. En cas de mal-être persistant, consultez un professionnel de santé.</div>
+    <a href="index.html" data-i18n="gd.back">← Retour à l'accueil</a> &nbsp;·&nbsp; <a href="privacy.html">Confidentialité</a> &nbsp;·&nbsp; © 2026 Bengacoon
+    <div class="disc" data-i18n="gd.disc">Flowercoon est un accompagnement de bien-être émotionnel. Il ne remplace pas un avis, un diagnostic ou un traitement médical. En cas de mal-être persistant, consultez un professionnel de santé.</div>
   </div>
 </footer>
 
+<script src="lang.js" defer></script>
 </body>
 </html>

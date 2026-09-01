@@ -33,6 +33,7 @@
   header nav{margin-left:auto;display:flex;gap:20px;font-size:14px;font-weight:600;flex-wrap:wrap}
   header nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
   header nav a:hover,header nav a.active{color:var(--vert)}
+  #fc-lang{font:inherit;font-size:13px;font-weight:700;color:var(--vert);background:#fff;border:1px solid var(--creme-2);border-radius:8px;padding:4px 8px;cursor:pointer}
   @media(max-width:600px){header nav{width:100%;margin-left:0;gap:14px 18px;padding-top:2px}}
 
   /* Hero */
@@ -106,11 +107,12 @@
       <span class="brand">Flowercoon<small>par Bengacoon</small></span>
     </a>
     <nav>
-      <a href="index.html" class="active">Accueil</a>
-      <a href="index.html#fonctions">Fonctions</a>
-      <a href="guide.html">Guide</a>
-      <a href="index.html#premium">Premium</a>
-      <a href="privacy.html">Confidentialité</a>
+      <a href="index.html" class="active" data-i18n="nav.accueil">Accueil</a>
+      <a href="index.html#fonctions" data-i18n="nav.fonctions">Fonctions</a>
+      <a href="guide.html" data-i18n="nav.guide">Guide</a>
+      <a href="index.html#premium" data-i18n="nav.premium">Premium</a>
+      <a href="privacy.html" data-i18n="nav.confidentialite">Confidentialité</a>
+      <select id="fc-lang" aria-label="Langue / Language"></select>
     </nav>
   </div>
 </header>
@@ -121,16 +123,16 @@
     <img class="logo" src="assets/icon.png" alt="Flowercoon">
     <div class="par">par Bengacoon</div>
     <h1>Flowercoon</h1>
-    <p class="lead">Votre compagnon des Fleurs de Bach : une application douce et illustrée pour accompagner vos émotions, jour après jour.</p>
+    <p class="lead" data-i18n="idx.hero.lead">Votre compagnon des Fleurs de Bach : une application douce et illustrée pour accompagner vos émotions, jour après jour.</p>
     <div class="stores">
       <a class="store soon" href="#" aria-disabled="true">
-        <span class="em">▶</span><span><small>Bientôt sur</small>Google&nbsp;Play</span>
+        <span class="em">▶</span><span><small data-i18n="idx.store.soon">Bientôt sur</small>Google&nbsp;Play</span>
       </a>
       <a class="store soon" href="#">
-        <span class="em"></span><span><small>Bientôt sur</small>App&nbsp;Store</span>
+        <span class="em"></span><span><small data-i18n="idx.store.soon2">Bientôt sur</small>App&nbsp;Store</span>
       </a>
       <a class="store" href="https://github.com/jdviallat/flowercoon/releases/latest/download/Flowercoon.apk">
-        <span class="em">⬇</span><span><small>Android · hors store</small>Télécharger&nbsp;l'APK</span>
+        <span class="em">⬇</span><span><small data-i18n="idx.store.androidNote">Android · hors store</small><span data-i18n="idx.store.dl">Télécharger l'APK</span></span>
       </a>
     </div>
   </div>
@@ -138,43 +140,43 @@
 
 <div class="shots">
   <div class="inner">
-      <figure><img src="assets/capture-1.png" alt="Les 38 fleurs" loading="lazy" width="286" height="620"><figcaption>Les 38 fleurs</figcaption></figure>
-      <figure><img src="assets/capture-2.png" alt="Fiche d'une fleur" loading="lazy" width="286" height="620"><figcaption>Fiche d'une fleur</figcaption></figure>
-      <figure><img src="assets/capture-3.png" alt="Questionnaire" loading="lazy" width="286" height="620"><figcaption>Questionnaire</figcaption></figure>
-      <figure><img src="assets/capture-4.png" alt="Suivi de cure" loading="lazy" width="286" height="620"><figcaption>Suivi de cure</figcaption></figure>
-      <figure><img src="assets/capture-5.png" alt="Accueil" loading="lazy" width="286" height="620"><figcaption>Accueil</figcaption></figure>
+      <figure><img src="assets/capture-1.png" alt="Les 38 fleurs" loading="lazy" width="286" height="620"><figcaption data-i18n="idx.shot1">Les 38 fleurs</figcaption></figure>
+      <figure><img src="assets/capture-2.png" alt="Fiche d'une fleur" loading="lazy" width="286" height="620"><figcaption data-i18n="idx.shot2">Fiche d'une fleur</figcaption></figure>
+      <figure><img src="assets/capture-3.png" alt="Questionnaire" loading="lazy" width="286" height="620"><figcaption data-i18n="idx.shot3">Questionnaire</figcaption></figure>
+      <figure><img src="assets/capture-4.png" alt="Suivi de cure" loading="lazy" width="286" height="620"><figcaption data-i18n="idx.shot4">Suivi de cure</figcaption></figure>
+      <figure><img src="assets/capture-5.png" alt="Accueil" loading="lazy" width="286" height="620"><figcaption data-i18n="idx.shot5">Accueil</figcaption></figure>
   </div>
 </div>
 
 <section id="fonctions">
   <div class="wrap">
-    <div class="eyebrow">Ce que fait l'app</div>
-    <h2>Un accompagnement tout en douceur</h2>
-    <p class="sub">Découvrir, comprendre et suivre vos Fleurs de Bach — sans compte, sans jargon.</p>
+    <div class="eyebrow" data-i18n="idx.fx.eyebrow">Ce que fait l'app</div>
+    <h2 data-i18n="idx.fx.h2">Un accompagnement tout en douceur</h2>
+    <p class="sub" data-i18n="idx.fx.sub">Découvrir, comprendre et suivre vos Fleurs de Bach — sans compte, sans jargon.</p>
     <div class="grid">
       <div class="card">
-        <span class="em">🌼</span><h3>Découvrir les fleurs</h3>
-        <p>Les 38 Fleurs de Bach et le Rescue, chacune avec sa photo, son état émotionnel, son côté lumineux et sa part d'ombre. Recherche par besoin et comparateur de deux fleurs.</p>
+        <span class="em">🌼</span><h3 data-i18n="idx.fx.c1.t">Découvrir les fleurs</h3>
+        <p data-i18n="idx.fx.c1.d">Les 38 Fleurs de Bach et le Rescue, chacune avec sa photo, son état émotionnel, son côté lumineux et sa part d'ombre. Recherche par besoin et comparateur de deux fleurs.</p>
       </div>
       <div class="card">
-        <span class="em">📝</span><h3>Questionnaire émotionnel</h3>
-        <p>Faites le point en douceur : Flowercoon compose un mélange personnalisé de fleurs avec sa posologie, et vous montre en quoi chacune répond à votre état.</p>
+        <span class="em">📝</span><h3 data-i18n="idx.fx.c2.t">Questionnaire émotionnel</h3>
+        <p data-i18n="idx.fx.c2.d">Faites le point en douceur : Flowercoon compose un mélange personnalisé de fleurs avec sa posologie, et vous montre en quoi chacune répond à votre état.</p>
       </div>
       <div class="card">
-        <span class="em">💧</span><h3>Suivre votre cure</h3>
-        <p>Notez vos prises, votre humeur et votre énergie. Rappels adaptés, graphiques de progrès, et possibilité de créer votre propre suivi sur mesure.</p>
+        <span class="em">💧</span><h3 data-i18n="idx.fx.c3.t">Suivre votre cure</h3>
+        <p data-i18n="idx.fx.c3.d">Notez vos prises, votre humeur et votre énergie. Rappels adaptés, graphiques de progrès, et possibilité de créer votre propre suivi sur mesure.</p>
       </div>
       <div class="card">
-        <span class="em">⭐</span><h3>Favoris & journal</h3>
-        <p>Marquez vos fleurs préférées, tenez un journal daté, gagnez des badges de régularité, et retrouvez une « fleur du jour » à chaque ouverture.</p>
+        <span class="em">⭐</span><h3 data-i18n="idx.fx.c4.t">Favoris & journal</h3>
+        <p data-i18n="idx.fx.c4.d">Marquez vos fleurs préférées, tenez un journal daté, gagnez des badges de régularité, et retrouvez une « fleur du jour » à chaque ouverture.</p>
       </div>
       <div class="card">
-        <span class="em">🌬️</span><h3>Mode SOS & respiration</h3>
-        <p>Un moment difficile ? Un exercice de cohérence cardiaque guidé (l'écran reste allumé) et le mélange de secours, toujours à portée de main.</p>
+        <span class="em">🌬️</span><h3 data-i18n="idx.fx.c5.t">Mode SOS & respiration</h3>
+        <p data-i18n="idx.fx.c5.d">Un moment difficile ? Un exercice de cohérence cardiaque guidé (l'écran reste allumé) et le mélange de secours, toujours à portée de main.</p>
       </div>
       <div class="card">
-        <span class="em">🌍</span><h3>Élixirs du monde</h3>
-        <p>Au-delà des fleurs du Dr Bach, une collection d'essences australiennes et californiennes illustrées, à explorer avec la version Premium.</p>
+        <span class="em">🌍</span><h3 data-i18n="idx.fx.c6.t">Élixirs du monde</h3>
+        <p data-i18n="idx.fx.c6.d">Au-delà des fleurs du Dr Bach, une collection d'essences australiennes et californiennes illustrées, à explorer avec la version Premium.</p>
       </div>
     </div>
   </div>
@@ -183,41 +185,42 @@
 <section id="premium" class="premium">
   <div class="wrap">
     <div class="box">
-      <span class="price">Achat unique · 4,90 €</span>
-      <h2>Premium, sans abonnement</h2>
-      <p class="sub" style="margin-bottom:6px">Débloquez toute la richesse de Flowercoon d'un seul achat.</p>
+      <span class="price" data-i18n="idx.pr.price">Achat unique · 4,90 €</span>
+      <h2 data-i18n="idx.pr.h2">Premium, sans abonnement</h2>
+      <p class="sub" style="margin-bottom:6px" data-i18n="idx.pr.sub">Débloquez toute la richesse de Flowercoon d'un seul achat.</p>
       <ul>
-        <li>Toutes les fleurs et le Rescue</li>
-        <li>Questionnaires Standard et Approfondi</li>
-        <li>Suivi complet et suivi personnalisé</li>
-        <li>Collection « Élixirs du monde »</li>
+        <li data-i18n="idx.pr.li1">Toutes les fleurs et le Rescue</li>
+        <li data-i18n="idx.pr.li2">Questionnaires Standard et Approfondi</li>
+        <li data-i18n="idx.pr.li3">Suivi complet et suivi personnalisé</li>
+        <li data-i18n="idx.pr.li4">Collection « Élixirs du monde »</li>
       </ul>
-      <p class="free">La version gratuite offre le questionnaire Express et une sélection de fleurs — pour découvrir l'app en toute liberté.</p>
-      <p class="free" style="margin-top:14px">Sur les stores, l'achat se fait dans l'app. Pour l'<strong>APK téléchargé</strong> (hors store), payez ici et recevez votre <strong>licence à vie</strong> par email :</p>
+      <p class="free" data-i18n="idx.pr.free">La version gratuite offre le questionnaire Express et une sélection de fleurs — pour découvrir l'app en toute liberté.</p>
+      <p class="free" style="margin-top:14px" data-i18n-html="idx.pr.apkNote">Sur les stores, l'achat se fait dans l'app. Pour l'<strong>APK téléchargé</strong> (hors store), payez ici et recevez votre <strong>licence à vie</strong> par email :</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px">
-        <a href="https://paypal.me/hypnocoon/4.90EUR" style="display:inline-block;padding:13px 22px;border-radius:12px;font-weight:800;text-decoration:none;color:#fff;background:#0070ba">Payer avec PayPal · 4,90 €</a>
-        <a href="https://pay.sumup.com/b2c/Q9N3OW3Q" style="display:inline-block;padding:13px 22px;border-radius:12px;font-weight:800;text-decoration:none;color:#fff;background:#1b2a4a">Payer avec SumUp · 4,90 €</a>
+        <a href="https://paypal.me/hypnocoon/4.90EUR" style="display:inline-block;padding:13px 22px;border-radius:12px;font-weight:800;text-decoration:none;color:#fff;background:#0070ba" data-i18n="idx.pr.paypal">Payer avec PayPal · 4,90 €</a>
+        <a href="https://pay.sumup.com/b2c/Q9N3OW3Q" style="display:inline-block;padding:13px 22px;border-radius:12px;font-weight:800;text-decoration:none;color:#fff;background:#1b2a4a" data-i18n="idx.pr.sumup">Payer avec SumUp · 4,90 €</a>
       </div>
-      <p class="free" style="margin-top:10px;font-size:13px">Après paiement, collez la licence dans l'app (<em>Réglages → J'ai un code</em>) — débloquée à vie et hors-ligne. <a href="mailto:info@hypnocoon.com" style="color:var(--or)">info@hypnocoon.com</a></p>
+      <p class="free" style="margin-top:10px;font-size:13px" data-i18n-html="idx.pr.licNote">Après paiement, collez la licence dans l'app (<em>Réglages → J'ai un code</em>) — débloquée à vie et hors-ligne. <a href="mailto:info@hypnocoon.com" style="color:var(--or)">info@hypnocoon.com</a></p>
     </div>
   </div>
 </section>
 
 <section id="confidentialite" class="privacy">
   <div class="wrap">
-    <div class="eyebrow" style="color:var(--or-clair)">Vos données, chez vous</div>
-    <h2>Rien ne quitte votre téléphone</h2>
-    <p class="sub">Aucune donnée envoyée sur Internet, aucun compte à créer. Verrouillage par code ou Face ID, export et import de vos données quand vous le souhaitez.</p>
+    <div class="eyebrow" style="color:var(--or-clair)" data-i18n="idx.pv.eyebrow">Vos données, chez vous</div>
+    <h2 data-i18n="idx.pv.h2">Rien ne quitte votre téléphone</h2>
+    <p class="sub" data-i18n="idx.pv.sub">Aucune donnée envoyée sur Internet, aucun compte à créer. Verrouillage par code ou Face ID, export et import de vos données quand vous le souhaitez.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <strong>Flowercoon</strong> — par Bengacoon · Disponible en 9 langues<br>
-    <a href="guide.html">Guide d'utilisation</a> &nbsp;·&nbsp; <a href="privacy.html">Politique de confidentialité</a> &nbsp;·&nbsp; © 2026 Bengacoon
-    <p class="disc">Flowercoon est une application de bien-être émotionnel. Elle n'établit aucun diagnostic, ne constitue pas un traitement et ne remplace pas l'avis d'un professionnel de santé.</p>
+    <strong>Flowercoon</strong> — <span data-i18n="idx.ft.brand">par Bengacoon · Disponible en 9 langues</span><br>
+    <a href="guide.html" data-i18n="idx.ft.guide">Guide d'utilisation</a> &nbsp;·&nbsp; <a href="privacy.html" data-i18n="idx.ft.privacy">Politique de confidentialité</a> &nbsp;·&nbsp; © 2026 Bengacoon
+    <p class="disc" data-i18n="idx.ft.disc">Flowercoon est une application de bien-être émotionnel. Elle n'établit aucun diagnostic, ne constitue pas un traitement et ne remplace pas l'avis d'un professionnel de santé.</p>
   </div>
 </footer>
 
+<script src="lang.js" defer></script>
 </body>
 </html>
