@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Versions — Flowercoon</title>
+<link rel="icon" href="assets/favicon.png">
+<style>
+  :root{--vert:#2E5E4E;--vert-fonce:#22483C;--or:#C9A24B;--or-clair:#E0C583;--creme:#F6F2E9;--creme-2:#EFE8D8;--texte:#2A2A28;--muted:#6E6A60}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--texte);background:var(--creme);line-height:1.6}
+  a{color:var(--vert)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;z-index:20;background:rgba(246,242,233,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--creme-2)}
+  header .wrap{display:flex;align-items:center;gap:12px;min-height:62px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+  header .home{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
+  header img{width:34px;height:34px;border-radius:9px}
+  header .brand{font-weight:800;font-size:18px;letter-spacing:.2px}
+  header .brand small{display:block;font-weight:600;font-size:10.5px;color:var(--muted);letter-spacing:.3px}
+  header nav{margin-left:auto;display:flex;gap:20px;font-size:14px;font-weight:600;flex-wrap:wrap}
+  header nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
+  header nav a:hover,header nav a.active{color:var(--vert)}
+  #fc-lang{font:inherit;font-size:13px;font-weight:700;color:var(--vert);background:#fff;border:1px solid var(--creme-2);border-radius:8px;padding:4px 8px;cursor:pointer}
+  @media(max-width:600px){header nav{width:100%;margin-left:0;gap:14px 18px;padding-top:2px}}
+  .hero{background:linear-gradient(160deg,var(--vert),var(--vert-fonce));color:#fff;text-align:center;padding:44px 0 48px}
+  .hero .eyebrow{color:var(--or-clair);font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+  .hero h1{font-size:34px;font-weight:800;letter-spacing:-.5px;margin:8px 0}
+  .hero p{color:#EAF1EC;max-width:520px;margin:6px auto 0;font-size:15px}
+  @media(max-width:560px){.hero h1{font-size:27px}}
+  .list{padding:38px 0 24px}
+  .rel{background:#fff;border:1px solid var(--creme-2);border-radius:16px;padding:18px 20px;margin-bottom:16px}
+  .relhead{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+  .ver{background:var(--vert);color:#fff;font-weight:800;font-size:14px;border-radius:999px;padding:5px 13px;white-space:nowrap}
+  .relhead h3{font-size:18px;color:var(--vert);font-weight:800}
+  .date{font-size:12.5px;color:var(--muted)}
+  .rel ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .rel li{display:flex;gap:10px;font-size:14.5px;line-height:1.5}
+  .rel li .ic{flex:0 0 auto}
+  footer{background:var(--vert-fonce);color:#B9C9BF;text-align:center;padding:36px 0;font-size:13.5px;margin-top:20px}
+  footer a{color:var(--or-clair);text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="home" href="index.html"><img src="assets/icon.png" alt="Flowercoon"><span class="brand">Flowercoon<small>par Bengacoon</small></span></a>
+    <nav>
+      <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+      <a href="index.html#fonctions" data-i18n="nav.fonctions">Fonctions</a>
+      <a href="guide.html" data-i18n="nav.guide">Guide</a>
+      <a href="versions.html" class="active" data-i18n="nav.versions">Versions</a>
+      <a href="privacy.html" data-i18n="nav.confidentialite">Confidentialité</a>
+      <select id="fc-lang" aria-label="Langue / Language"></select>
+    </nav>
+  </div>
+</header>
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Flowercoon</div>
+  <h1 data-i18n="vr.hero">Historique des versions</h1>
+  <p data-i18n="vr.intro">Toutes les nouveautés de Flowercoon, version après version. La dernière version est toujours disponible au téléchargement.</p>
+</div></div>
+<div class="wrap list">
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.8.0</span>
+      <div><h3>Fleur du jour &amp; partage des mélanges</h3><span class="date">Septembre 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> 🌼 Fleur du jour : activez une notification quotidienne (Réglages) pour recevoir chaque matin une inspiration et découvrir la fleur du jour.</li>
+      <li><span class="ic">✨</span> 📤 Partagez un mélange en image : depuis la fiche d'un mélange, une jolie carte à envoyer à vos proches ou sur les réseaux.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.7.0</span>
+      <div><h3>Fiches en 9 langues, +10 essences, partage en image</h3><span class="date">Septembre 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">🌿</span> 🌍 Le contenu des fiches de fleurs est désormais traduit dans les 9 langues (avant, seule l'interface l'était) : accroche, états, affirmation, indications, plante… tout s'affiche dans votre langue.</li>
+      <li><span class="ic">✨</span> 🌏 10 nouveaux Élixirs du monde (Australian Bush &amp; Californiennes FES) : Boab, Five Corners, Crowea, Flannel Flower, Red Grevillea, Bourrache, Tournesol, Millepertuis, Mimule écarlate, Iris — le catalogue passe à 63 fleurs.</li>
+      <li><span class="ic">✨</span> 📤 Partagez une fleur en image : une jolie carte (photo, nom, affirmation) à envoyer à vos proches ou sur les réseaux.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.6.1</span>
+      <div><h3>Guide intégré &amp; mises à jour plus claires</h3><span class="date">Septembre 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> 📖 Guide d'utilisation intégré : retrouvez dans Réglages tout ce que l'app permet de faire, expliqué pas à pas — consultable hors-ligne, sans connexion.</li>
+      <li><span class="ic">🌿</span> Mises à jour plus rassurantes : le fichier téléchargé porte désormais le numéro de version (ex. Flowercoon-2.6.1.apk), et le message rappelle que vos données et votre licence sont conservées.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.6.0</span>
+      <div><h3>Roue des émotions, quiz &amp; agenda</h3><span class="date">Septembre 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> 🎡 Roue des émotions : choisissez le registre qui vous parle et découvrez les fleurs qui l'accompagnent.</li>
+      <li><span class="ic">✨</span> 🎯 Quiz des fleurs : un petit jeu pour apprendre à reconnaître les 38 fleurs de Bach.</li>
+      <li><span class="ic">✨</span> 🗓️ Mode thérapeute : agenda de séances daté par client (notes de suivi, historique).</li>
+      <li><span class="ic">✨</span> 🌿 En fin de cure, l'application vous propose de faire le bilan pour mesurer le chemin parcouru.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.5.2</span>
+      <div><h3>Sécurité des données &amp; licence</h3><span class="date">Août 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">🌿</span> Vos données (clients, cures, prises, journal, mélanges) sont désormais protégées : une sauvegarde de secours automatique est conservée à chaque enregistrement, et une lecture défectueuse ne peut plus les effacer. Une mise à jour normale n'y touche jamais.</li>
+      <li><span class="ic">🌿</span> Votre licence n'est plus jamais perdue : elle est conservée et re-vérifiée à chaque lancement — l'accès complet se rétablit tout seul.</li>
+      <li><span class="ic">✨</span> Fiche d'une fleur : « Souvent associée à » (fleurs liées, d'un tap) et « À ne pas confondre ».</li>
+      <li><span class="ic">✨</span> Mes mélanges : enregistrez et nommez votre propre combinaison depuis « Analyser un mélange », retrouvez-la et rouvrez-la quand vous voulez.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.5.1</span>
+      <div><h3>Fiches de mélanges &amp; correctif de version</h3><span class="date">Août 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Fiches de mélanges : 20 combinaisons prêtes à l'emploi, rangées par thème, avec le rôle de chaque fleur, la synergie, la posologie et la durée conseillée — le tout dans les 9 langues.</li>
+      <li><span class="ic">✨</span> « Analyser un mélange » détecte désormais une recette connue et propose sa fiche ; il indique aussi le rôle de chaque fleur et les éventuelles redondances.</li>
+      <li><span class="ic">✨</span> Exportez la fiche d'un mélange en PDF.</li>
+      <li><span class="ic">🔧</span> Correctif : la version affichée et la vérification des mises à jour sont de nouveau alignées (la 2.5.0 s'affichait par erreur en 2.4.0).</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.5.0</span>
+      <div><h3>Analyser un mélange &amp; ordonnance PDF</h3><span class="date">Août 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Nouveau : « Analyser un mélange » — choisissez 2 à 4 fleurs et découvrez le sens du mélange (comment elles se complètent), sa cohérence, les états qu'il accompagne et sa posologie.</li>
+      <li><span class="ic">✨</span> Mode thérapeute : générez une « Ordonnance (PDF) » propre à remettre au client — nom, fleurs prescrites, posologie, durée et ligne de signature.</li>
+      <li><span class="ic">🌿</span> Historique des versions : chaque version se déplie au clic (plus court à parcourir).</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.4.0</span>
+      <div><h3>Application entièrement traduite (9 langues)</h3><span class="date">Août 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">🌿</span> Toute l'application est désormais traduite dans les 9 langues (français, anglais, espagnol, italien, portugais, allemand, danois, finnois, suédois) — plus seulement l'accueil, mais aussi le suivi, les réglages, le questionnaire, les fiches et tous les écrans.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.3.0</span>
+      <div><h3>Mettre une cure en pause</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Mettez votre cure en pause (voyage, oubli volontaire) : les rappels sont suspendus et vous la reprenez quand vous voulez, depuis « Gérer la cure ». Les prises manquées seront rattrapées automatiquement.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.2.0</span>
+      <div><h3>Tout modifiable &amp; rallonge automatique</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Modifiez une prise déjà notée d'un simple appui : doses, humeur, énergie, ressenti — et même sa date (utile quand on la note en retard).</li>
+      <li><span class="ic">✨</span> Modifiez vos notes de journal après coup.</li>
+      <li><span class="ic">✨</span> Rallonge automatique : rater une prise ne « casse » plus votre cure — elle se prolonge juste ce qu'il faut pour aller au bout. Le suivi affiche les prises restantes et la fin estimée.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.1.0</span>
+      <div><h3>Mon jardin, rituel du soir &amp; suivi du flacon</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Nouveau : « Mon jardin » — chaque prise de gouttes fait pousser puis éclore une fleur de votre cure, avec sa vraie photo. Un jardin unique qui grandit avec votre régularité, à partager.</li>
+      <li><span class="ic">✨</span> Nouveau : « Rituel du soir » — un moment guidé avant de dormir : quelques respirations, votre fleur pour la nuit et son affirmation, à écouter à voix haute.</li>
+      <li><span class="ic">✨</span> Nouveau : suivi du flacon — prenez-le en photo, indiquez sa contenance (ml, gouttes ou comprimés) et la dose par prise ; une barre de progression montre ce qu'il reste et vous alerte quand il faut le renouveler.</li>
+      <li><span class="ic">🌿</span> Les fiches de fleurs se lisent désormais à voix haute d'un simple appui (bouton « Écouter »), sans réglage préalable.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.0.1</span>
+      <div><h3>Mises à jour automatiques activées</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> L'application vérifie désormais toute seule à l'ouverture si une nouvelle version est disponible, et vous propose de la mettre à jour via le store.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">2.0.0</span>
+      <div><h3>Flowercoon 2</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">🌿</span> Passage en version 2.0 : la grande version qui rassemble toutes les nouveautés (Élixirs du monde, tirage oracle, SOS respiration, mélanges tout prêts, bilan, 9 langues, mises à jour intégrées).</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.13.0</span>
+      <div><h3>Respiration : écran maintenu allumé</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">🔧</span> Pendant l'exercice de respiration (SOS), l'écran ne se verrouille plus automatiquement.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.12.0</span>
+      <div><h3>Affichage des fleurs corrigé</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">🔧</span> Les vignettes des fleurs (dont les Élixirs du monde) s'affichent désormais toutes de façon fiable : le catalogue est optimisé (liste virtualisée) pour ne charger chaque photo qu'à l'écran.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.11.0</span>
+      <div><h3>Oracle, SOS, mélanges &amp; 9 langues</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Tirage oracle : tirez une carte fleur au hasard, avec son poème et son message.</li>
+      <li><span class="ic">✨</span> SOS · Apaisement : respiration guidée (cohérence cardiaque) + mélange de secours.</li>
+      <li><span class="ic">✨</span> Mélanges tout prêts : des combinaisons thématiques (sommeil, trac, deuil, confiance…) à démarrer en un tap.</li>
+      <li><span class="ic">✨</span> Mon bilan : l'évolution de votre humeur et de votre énergie sur toutes vos cures.</li>
+      <li><span class="ic">✨</span> 9 langues : français, anglais, espagnol, italien, portugais, allemand, danois, finnois, suédois.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.10.0</span>
+      <div><h3>Mises à jour intégrées</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> L'application vous prévient désormais quand une nouvelle version est disponible, avec un bouton pour la mettre à jour.</li>
+      <li><span class="ic">✨</span> Bouton « Rechercher une mise à jour » dans Réglages › À propos.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.9.0</span>
+      <div><h3>Préparation iOS &amp; ajustements</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">🌿</span> Préparation de la version iPhone (App Store).</li>
+      <li><span class="ic">✨</span> Possibilité de débloquer Premium avec un code d'accès (Réglages › Abonnement).</li>
+      <li><span class="ic">🔧</span> Petits ajustements internes et de sécurité.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.8.0</span>
+      <div><h3>Nouvelle formule (4,90 €)</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">🌿</span> Version gratuite : le questionnaire Express et une sélection de 12 fleurs sont désormais offerts.</li>
+      <li><span class="ic">🌿</span> Premium à 4,90 € (achat unique) débloque toutes les fleurs, les questionnaires Standard &amp; Approfondi, le suivi complet et les Élixirs du monde.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.7.0</span>
+      <div><h3>Favoris, journal, sécurité &amp; anglais</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Favoris ⭐ : marquez vos fleurs préférées et retrouvez-les en haut du catalogue.</li>
+      <li><span class="ic">✨</span> Comparateur : mettez deux fleurs côte à côte (états, part d'ombre, affirmation).</li>
+      <li><span class="ic">✨</span> Journal libre daté et badges de régularité dans le suivi.</li>
+      <li><span class="ic">✨</span> Rapport de cure en PDF (observance + évolution humeur/énergie début→fin).</li>
+      <li><span class="ic">✨</span> Import d'une sauvegarde (migration entre appareils) et onboarding à la première ouverture.</li>
+      <li><span class="ic">✨</span> Verrouillage de l'app par code PIN et biométrie (Face/Touch ID).</li>
+      <li><span class="ic">✨</span> Application bilingue : Français / English (navigation &amp; accueil traduits).</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.6.0</span>
+      <div><h3>Fleur du jour, édition &amp; rappels</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Fleur du jour sur l'accueil : une fleur différente chaque jour, à découvrir d'un tap.</li>
+      <li><span class="ic">✨</span> Modifiez tout ce qui est enregistré : votre profil (prénom, intention) et l'intention de vos cures.</li>
+      <li><span class="ic">✨</span> Confirmation avant chaque suppression (prises comprises) pour éviter les fausses manœuvres.</li>
+      <li><span class="ic">✨</span> Un petit « ✓ Enregistré » confirme chaque sauvegarde.</li>
+      <li><span class="ic">🌿</span> Les rappels de prises suivent désormais votre cure : autant de notifications que de prises/jour, réparties dans la journée.</li>
+      <li><span class="ic">✨</span> Les 14 photos des Élixirs du monde s'affichent dans l'app, et le livre PDF les inclut désormais.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.5.0</span>
+      <div><h3>Premium &amp; Élixirs du monde</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Flowercoon Premium : le questionnaire, le suivi et le suivi personnalisé sont désormais des fonctions premium (les 38 Fleurs de Bach restent gratuites).</li>
+      <li><span class="ic">✨</span> Élixirs du monde : 14 essences florales au-delà de Bach (Australian Bush &amp; Californiennes/FES), réservées à Premium.</li>
+      <li><span class="ic">✨</span> Suivi personnalisé : composez votre propre cure — fleurs, gouttes, fréquence et durée — sans passer par le questionnaire.</li>
+      <li><span class="ic">🌿</span> Catalogue enrichi : les nouvelles essences apparaissent avec un cadenas dans la version gratuite.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.4.0</span>
+      <div><h3>Flowercoon — cures sur mesure &amp; bilans</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">🌿</span> L'application prend son nom : Flowercoon, par Bengacoon (votre compagnon des Fleurs de Bach).</li>
+      <li><span class="ic">✨</span> Questionnaire en 3 niveaux : Express (4 questions), Standard (12) ou Approfondi (20).</li>
+      <li><span class="ic">✨</span> Vous choisissez vos fleurs parmi la proposition, avec le taux de couverture du questionnaire (global et détaillé par état, en bandes colorées).</li>
+      <li><span class="ic">✨</span> Durée de cure au choix (7 jours, 15 jours, 1 mois), gouttes et prises par jour réglables — modifiables et prolongeables en cours de route.</li>
+      <li><span class="ic">✨</span> Prise rapide « toutes mes fleurs » ou détaillée fleur par fleur ; compteur de prises du jour et barre de progression vers la fin de cure.</li>
+      <li><span class="ic">✨</span> Graphiques d'évolution de l'humeur et de l'énergie sur la durée de la cure.</li>
+      <li><span class="ic">✨</span> Bilans sauvegardés (consultables, supprimables, transformables en cure) et historique des cures avec reprise possible.</li>
+      <li><span class="ic">🌿</span> Prise rapide « toutes mes fleurs » directement depuis l'accueil.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.3.0</span>
+      <div><h3>Réglages harmonisés</h3><span class="date">Juillet 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Thème « Système » qui suit automatiquement le mode clair/sombre de l'appareil.</li>
+      <li><span class="ic">✨</span> Taille du texte réglable : petit, normal, grand, très grand.</li>
+      <li><span class="ic">✨</span> Lecture à voix haute des fiches de fleurs (vitesse réglable).</li>
+      <li><span class="ic">✨</span> Rappels de prises : jusqu'à 3 notifications quotidiennes (matin, midi, soir).</li>
+      <li><span class="ic">✨</span> Écran « Présentation de l'application » et accès au questionnaire depuis les réglages.</li>
+      <li><span class="ic">🌿</span> Historique des versions détaillé et section Langue (d'autres langues arrivent).</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.2.0</span>
+      <div><h3>Paramètres &amp; mode thérapeute</h3><span class="date">Juin 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Paramètres (roue ⚙️) avec apparence claire ou sombre.</li>
+      <li><span class="ic">✨</span> Mode thérapeute multi-clients : chaque client a ses cures et son suivi.</li>
+      <li><span class="ic">✨</span> Export PDF et Excel (CSV), sauvegarde complète JSON, réinitialisation.</li>
+      <li><span class="ic">✨</span> Page À propos.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">1.1.0</span>
+      <div><h3>Habillage Bengacoon</h3><span class="date">Juin 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">🌿</span> Icône, écran de démarrage et habillage à la marque Bengacoon.</li>
+    </ul>
+  </article>
+
+  <article class="rel">
+    <div class="relhead">
+      <span class="ver">0.1.0</span>
+      <div><h3>Version initiale</h3><span class="date">Mai 2026</span></div>
+    </div>
+    <ul>
+      <li><span class="ic">✨</span> Questionnaire émotionnel et mélange personnalisé (7 fleurs max.) avec posologie.</li>
+      <li><span class="ic">✨</span> Catalogue des 38 fleurs + Rescue : photos et cartes d'oracle.</li>
+      <li><span class="ic">✨</span> Suivi des prises de gouttes : humeur, énergie, observance.</li>
+    </ul>
+  </article>
+</div>
+<footer><div class="wrap">
+  <a href="index.html" data-i18n="pv.back">← Retour à l'accueil</a> &nbsp;·&nbsp; <a href="guide.html" data-i18n="nav.guide">Guide</a> &nbsp;·&nbsp; © 2026 Bengacoon
+</div></footer>
+<script src="lang.js" defer></script>
+</body>
+</html>
